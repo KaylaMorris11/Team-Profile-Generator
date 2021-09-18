@@ -113,6 +113,8 @@ inquirer
         if (error.isTtyError){
             //prompt couldnt be rendered in current environment
             else {
+                
                 //something else went wrong
         }
     });
+  
