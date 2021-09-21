@@ -1,4 +1,8 @@
 const inquirer = require("inquirer");
+const Manager = require("./lib/Manager")
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const fs = require("fs");
 
 const managerQuestions = [
     {
@@ -40,7 +44,7 @@ const internQuestions = [
     },
     {
         type:"input",
-        message:"What is your intern's office number?",
+        message:"What is the name of your intern's school?",
         name:"id"
     }
 ];
