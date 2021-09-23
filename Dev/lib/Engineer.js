@@ -4,14 +4,11 @@ class Engineer extends Employee {
 
 constructor(id, name, email, github ) {
 
-    super();
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.role = "Engineer"
+    super({id, name, email});
     this.github = github;
-    }
+    this.role = "Engineer"
 
+    }
     getId(){
         return this.id;
       }
@@ -21,11 +18,11 @@ constructor(id, name, email, github ) {
       getEmail() {
         return this.email;
       }
+      getGithubID() { 
+        return this.github;
+    }
     getRole() { 
         return "Engineer";
-    }
-    getGithubID() { 
-        return this.github;
     }
 };
 
