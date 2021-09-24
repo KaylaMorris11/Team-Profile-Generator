@@ -5,7 +5,7 @@ function EngineerCard(engineer) {
     <div class="card-body">
       <h5 class="card-header">
         ${engineer.getName()}<br>
-        <i class="fas fa-mug-hot"></i>${engineer.getRole()}</h5>
+        <i class="fas fa-glasses"></i>${engineer.getRole()}</h5>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${engineer.getId()}</li>
