@@ -1,15 +1,19 @@
-function InternCard(intern){
+function InternCard(intern) {
     return ` 
-    <div class="team-card-container">
-        <div class="team-container">
-           <div class="team-card">
-             <h3 class="">${intern.getName()}</h3>
-             <p>${intern.getId()}</p>
-             <p>${intern.getEmail()}</p>
-             <p>${intern.getOfficeNumber()}</p>
-           </div>
-         </div>
-       </div>`
+    
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-header">
+        ${intern.getName()}<br>
+        <i class="fas fa-mug-hot"></i>${intern.getRole()}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID: ${intern.getId()}</li>
+      <li class="list-group-item">Email: ${intern.getEmail()}</li>
+      <li class="list-group-item">School: ${intern.getSchool()}</li>
+    </ul>
+  </div>
+  `
 };
 
 module.exports = InternCard;

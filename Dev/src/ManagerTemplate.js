@@ -7,9 +7,9 @@ function ManagerCard(manager){
                 <i class="fas fa-mug-hot"></i>${manager.getRole()}</h5>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">ID:${manager.getId()}</li>
-              <li class="list-group-item">Email:${manager.getEmail()}</li>
-              <li class="list-group-item">OfficeNumber:${manager.getOfficeNumber()}</li>
+              <li class="list-group-item">ID: ${manager.getId()}</li>
+              <li class="list-group-item">Email: ${manager.getEmail()}</li>
+              <li class="list-group-item">OfficeNumber: ${manager.getOfficeNumber()}</li>
             </ul>
           </div>`
 };

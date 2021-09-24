@@ -20,6 +20,6 @@ class Manager extends Employee {
   getRole() {
     return "Manager";
   }
-}
+};
 
 module.exports = Manager;

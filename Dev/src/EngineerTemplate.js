@@ -1,15 +1,19 @@
-function EngineerCard(engineer){
+function EngineerCard(engineer) {
     return ` 
-    <div class="team-card-container">
-        <div class="team-container">
-           <div class="team-card">
-             <h3 class="">${engineer.getName()}</h3>
-             <p>${engineer.getId()}</p>
-             <p>${engineer.getEmail()}</p>
-             <p>${engineer.getOfficeNumber()}</p>
-           </div>
-         </div>
-       </div>`
+    
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-header">
+        ${engineer.getName()}<br>
+        <i class="fas fa-mug-hot"></i>${engineer.getRole()}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID: ${engineer.getId()}</li>
+      <li class="list-group-item">Email: ${engineer.getEmail()}</li>
+      <li class="list-group-item">GitHub: ${engineer.getGithubId()}</li>
+    </ul>
+  </div>
+`
 };
 
 module.exports = EngineerCard;

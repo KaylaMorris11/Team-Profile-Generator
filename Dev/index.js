@@ -64,12 +64,12 @@ const engineerQuestions = [
   {
     type: "input",
     message: "What is your engineer's email address?",
-    name: "address",
+    name: "email",
   },
   {
     type: "input",
-    message: "What is your engineer's office number?",
-    name: "number",
+    message: "What is your engineer's github username?",
+    name: "username",
   },
 ];
 
@@ -89,36 +89,36 @@ inquirer.prompt(managerQuestions).then(({ id, name, email, officeNumber }) => {
   return askWhatsNext();
 });
 
-//   .then(() => {
-//     //User employee objects to create HTML page and write it to a file
-//   })
-//   .catch((error) => {
-//     if (error.isTtyError) {
-//       //prompt couldnt be rendered in current environment
-//     } else {
-//       //something else went wrong
-//     }
-//   });
+  // .then(() => {
+  //   //User employee objects to create HTML page and write it to a file
+  // })
+  // .catch((error) => {
+  //   if (error.isTtyError) {
+  //     //prompt couldnt be rendered in current environment
+  //   } else {
+  //     //something else went wrong
+  //   }
+  // });
 
 const askWhatsNext = () => {
   console.log(teamArr);
   inquirer.prompt(whatsNextQuestions).then((whatsNextAnswer) => {
-    // return whatsnextAnswer;
+ 
     console.log(whatsNextAnswer.addTeamMember);
     switch (whatsNextAnswer.addTeamMember) {
       case "Intern":
         askforInternInfo();
         break;
-    //   case "Manager":
-    //       askForManager();
-        // break;
+      case "Manager":
+          askForManager();
+        break;
       case "Engineer":
           askforEngineerInfo();
         break;
       case "Finish":
         writeToFile("teamprofile.html", generateHTML(teamArr));
         break;
-      //default:
+  
     }
   });
 };
