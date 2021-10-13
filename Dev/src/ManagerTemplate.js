@@ -8,7 +8,7 @@ function ManagerCard(manager){
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: ${manager.getId()}</li>
-              <li class="list-group-item">Email: ${manager.getEmail()}</li>
+              <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
               <li class="list-group-item">OfficeNumber: ${manager.getOfficeNumber()}</li>
             </ul>
           </div>`

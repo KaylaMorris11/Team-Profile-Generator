@@ -69,7 +69,7 @@ const engineerQuestions = [
   {
     type: "input",
     message: "What is your engineer's github username?",
-    name: "username",
+    name: "github",
   },
 ];
 
@@ -129,7 +129,7 @@ const askforEngineerInfo = () => {
   };
 
   const askForManager = () => {
-    return inquirer.prompt(managerQuestions).then(({id, name, email, github}) => {
+    return inquirer.prompt(managerQuestions).then(({id, name, email, officeNumber}) => {
       const manager = new Manager(id, name, email, officeNumber);
       teamArr.push(manager);
       return askWhatsNext();
