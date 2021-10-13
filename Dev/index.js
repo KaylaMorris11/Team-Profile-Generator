@@ -89,17 +89,6 @@ inquirer.prompt(managerQuestions).then(({ id, name, email, officeNumber }) => {
   return askWhatsNext();
 });
 
-  // .then(() => {
-  //   //User employee objects to create HTML page and write it to a file
-  // })
-  // .catch((error) => {
-  //   if (error.isTtyError) {
-  //     //prompt couldnt be rendered in current environment
-  //   } else {
-  //     //something else went wrong
-  //   }
-  // });
-
 const askWhatsNext = () => {
   console.log(teamArr);
   inquirer.prompt(whatsNextQuestions).then((whatsNextAnswer) => {
@@ -138,7 +127,16 @@ const askforEngineerInfo = () => {
       return askWhatsNext();
     });
   };
-  
+
+  const askForManager = () => {
+    return inquirer.prompt(managerQuestions).then(({id, name, email, github}) => {
+      const manager = new Manager(id, name, email, officeNumber);
+      teamArr.push(manager);
+      return askWhatsNext();
+    });
+  };
+
+
 function writeToFile(fileName, data) {
   fs.writeFile(`./dist/${fileName}`, data, function (err) {
     console.log(fileName);
