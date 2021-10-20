@@ -1,0 +1,31 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myteamheader{
+text-align: center;
+background-color: rgb(220, 20, 60);
+padding: 20px;
+font-size: 28px;
+margin-bottom: 25px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card-header{
+  padding:25px;
+  background-color:rgb(144, 207, 231)
+}
+
+.card-container{
+display:flex;
+justify-content: center;
+}
+
+  li{
+    text-align: center;
+  }
