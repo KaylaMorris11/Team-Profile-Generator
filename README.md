@@ -11,5 +11,4 @@ As a manager, it would be convenient to enter in your intern and engineers names
 https://youtu.be/_7kenBI3Rl8
 
 ## Technoligies Used:
-BootStrap
-
+Inquirer, BootStrap
